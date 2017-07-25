@@ -1,0 +1,117 @@
+.fix-to-top {
+    position: fixed;
+    top: 100;
+}
+
+/* override the default uppercase text transform by bootstrap */
+
+.btn {
+	text-transform: capitalize;
+}
+
+
+/* .navbar-inverse { */
+/*     background-color: #337ab7; */
+/*     border-color: #fff; */
+/* } */
+/* .navbar-inverse .navbar-toggle { */
+/*     border-color: #fff; */
+/* } */
+/* .navbar-nav { */
+/*     background-color: #337ab7; */
+/*     border-color: #fff; */
+/* } */
+
+/* The following is used to overlap the navbar-inverse, derived by using : 
+http://bootstrap3-menu.codedorigin.com/#sthash.5PmNg8dP.RAHAIBh9.dpbs */
+
+.navbar-inverse { background-color: #337ab7}
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #6D999C}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #3F96E0}
+.dropdown-menu { background-color: #FFFFFF}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #428BCA}
+.navbar-inverse { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar-inverse { border-color: #ffffff}
+.navbar-inverse .navbar-brand { color: #F7CE88}
+.navbar-inverse .navbar-brand:hover { color: #FFFFFF}
+.navbar-inverse .navbar-nav>li>a { color: #F7F7F7}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #FFFFFF}
+.dropdown-menu>li>a { color: #333333}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #F7F7F7}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #F7F7F7}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+
+
+
+
+
+/* Active link colors */
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #3F96E0;
+}
+
+/* If row is described as no-gutting, as in the 4 list rows in search.html, then there is no padding */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+ /* The following is used by multiselect (two sides) to select columns to display */
+ .github.ribbon {
+	position: fixed;
+	display: block;
+	top: 40px;
+	right: 0;
+	border: 0;
+	z-index: 1001;
+}
+
+.prettyprint {
+	padding: 10px!important;
+}
+
+#wrap {
+	padding-top: 70px;
+}
+
+#home h1 {
+	margin-bottom: 30px;
+}
+#demo,
+#examples,
+#support,
+#download {
+	padding-top: 40px;
+}
+
+/* the following is used for testing metadata project. verdana */
+.pcmLogo {
+    font-family: verdana;
+    font-size: 16px; 
+    display:inline-block;
+}
+
+.chartTitle {
+    font-size: 14px;   
+    color: #0568AE;
+    font-weight: bold;
+}
+
+.Hchart1 div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}

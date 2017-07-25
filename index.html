@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" ng-app="yangapp">
+<!-- ng-app directive defines an AngularJS application -->
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Yang's Antiques</title>
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/> -->
+
+  <!-- <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+    <meta Access-Control-Allow-Origin="*"/> -->
+
+  <!-- CSS Styles -->
+
+  <!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">  -->
+
+  <!--     <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/loading-bar.css"> -->
+
+  <!--     <link rel="stylesheet" type="text/css" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css"> -->
+  <!--     <link rel="stylesheet" type="text/css" href=css/bootstrap-datetimepicker.css"> -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="bower_components/bootstrap3-datetimepicker/build/css/bootstrap-datetimepicker.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" /> -->
+
+  <!-- 	To make dashbaord -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/custom.css"> -->
+
+  <!-- To use C3 to draw charts -->
+  <!--  <link rel="stylesheet" type="text/css" href="bower_components/c3/c3.min.css"> -->
+  <!-- Load d3.js and c3.js -->
+  <!-- <script src="bower_components/d3/d3.min.js" charset="utf-8"></script> -->
+  <!-- <script src="bower_components/c3/c3.min.js"></script> -->
+
+  <link rel="stylesheet" type="text/css" href="css/yang.css">
+
+  <!-- javascripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+  <!-- <script src="bower_components/moment/min/moment-with-locales.min.js"></script> -->
+  <!-- <script src="lib/angular/angular.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
+  <!-- <script src="lib/bootstrap/bootstrap.min.js"></script> -->
+
+  <!--        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+
+
+  <!-- <script src="lib/angular/angular-animate.js"></script> -->
+
+  <!-- <script src="lib/bootstrap/ui-bootstrap-tpls.js"></script> -->
+
+
+  <!-- <script src="lib/angular-route/angular-ui-router.js"></script> -->
+  <!-- Using AngularUI router, instead of ngRouter -->
+  <!-- <script src="lib/loading-bar/loading-bar.js"></script> -->
+  <!-- <script src="lib/dir-pagination/dirPagination.js"></script> -->
+
+  <!--     the folllowing is for datetimepicker -->
+
+  <!-- <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> -->
+  <!-- <script src="lib/angular-bootstrap-datetimepicker-directive.min.js"></script> -->
+
+  <!--   The following is for export alert list to .csv file  -->
+  <!-- <script src="lib/angular-export.js"></script> -->
+
+
+  <!-- The following is for multi select. It is moved to config.html. Otherwise, the multiselect will not work -->
+  <!-- 	<script src="lib/multiselect/multiselect.js"></script> -->
+
+
+
+  <!-- Load rtpsm global constants -->
+  <!-- <script src="config/rtpsmHTML.js"></script> -->
+  <script src="js/app.js"></script>
+
+  <!-- Use Google Charts, need to uncomment the followings to use it -->
+
+  <!--  For core charts -->
+  <!--  	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  -->
+  <!-- For geocharts -->
+  <!-- 	<script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+
+  <script type="text/javascript">
+    // 	The following 2 lines are need to draw Google Chart. Commented out when dev code 
+// 	to save load time
+//    	  google.charts.load('current', {'packages':['geochart','corechart','controls','gauge']});	
+//     	  google.charts.setOnLoadCallback(drawDashboard);
+  </script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #cccccc">
+    <!--    <nav class="navbar navbar-default navbar-fixed-top" > -->
+
+
+    <!--     <nav class="navbar navbar-default navbar-fixed-top"> -->
+    <div class="container" ng-controller="indexController">
+      <div class="navbar-header" >
+        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed"
+          type="button">
+          
+          <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <!--           <a href="#" class="navbar-brand">PCI Events</a> -->
+        <!--               <a href="#" class="navbar-brand"><img class="img-responsive2" src="image/att_logo_blk.jpg">PCI Events</a> -->
+        <!-- <a href="#" class="navbar-brand pull-left">
+              <img style="margin: 0px 0px 20px 10px" height="18" class="img-responsive2" 
+              src="image/att_logo_blk5.png"></a> -->
+
+        <!--               <img style="margin: 0px 0px 20px 10px" height="18" class="img-responsive2"  -->
+        <!--               src="image/att_logo_blk.png"></a> -->
+      </div>
+      <div class="navbar-collapse collapse" id="navbar" style="background:#cccccc">
+        <ul class="nav navbar-nav" >
+
+          <!--           using words -->
+          <!--             <li ng-class="{active:$state.includes('Search')}"><a ui-sref="Search"><b>Search</b></a></li> -->
+
+          <!-- Using bootstrap glyphicon -->
+          <!--             <li ng-class="{active:$state.includes('Search')}"><a ui-sref="Search"> -->
+          <!--             <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li> -->
+
+          <!-- using font awesome -->
+
+          <li ng-class="{active:$state.includes('dashboard')}"><a style="color:black" ui-sref="Dashboard"><b>About  &nbsp;</b>
+            </a></li>
+
+          <li ng-class="{active:$state.includes('Search')}"><a style="color:black" ui-sref="Search"><b>Products &nbsp;</b>
+            </a></li>
+
+          <li ng-class="{active:$state.includes('Config')}"><a style="color:black" ui-sref="Config"><b>Contact &nbsp;</b>
+            </a></li>
+
+          <!-- 	    <li class="dropdown"> -->
+          <!-- 	      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a> -->
+          <!-- 	      <ul class="dropdown-menu"> -->
+          <!-- 		<li><a href="#">Action</a></li> -->
+          <!-- 		<li><a href="#">Another action</a></li> -->
+          <!-- 		<li><a href="#">Something else here</a></li> -->
+          <!-- 		<li role="separator" class="divider"></li> -->
+          <!-- 		<li><a href="#">Separated link</a></li> -->
+          <!-- 		<li role="separator" class="divider"></li> -->
+          <!-- 		<li><a href="#">One more separated link</a></li> -->
+          <!-- 	      </ul> -->
+          <!-- 	    </li> -->
+
+          <!--             <li ng-class="{active:$state.includes('Newbook')}"><a ui-sref="Newbook">Add New Book</a></li> -->
+        </ul>
+
+        <!-- <ul class="nav navbar-nav navbar-right">
+          <li><a>{{userName}} &nbsp &nbsp </a></li>
+        </ul> -->
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="fix-to-top"> -->
+  <!--   <h1> chunping </h1> -->
+  <!--   </div> -->
+
+  <!--  main content  -->
+
+  <div role="main" class="container theme-showcase">
+    <div class="" style="margin-top:60px;">
+      <!-- THe following line is where we will inject our content. All templates load in this view -->
+      <!-- This line allow all templates to load in this view div -->
+            <!-- <div ui-view></div> --> <!-- this uses UI router as rtpsm uses -->
+
+      <div ng-view>
+
+    </div>
+  </div>
+  <!-- <script src="lib/jquery.js"></script>
+  <script src="lib/bootstrap/bootstrap.min.js"></script> -->
+</body>
+
+</html>
