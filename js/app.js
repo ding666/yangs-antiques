@@ -68,6 +68,10 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 url: "/contact",
                 templateUrl: "html/contact.html"
             })
+             .state('footer', {
+                template:'html/footer.html',
+                controller:''
+          })
     }
 ]);
 
