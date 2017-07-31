@@ -136,23 +136,6 @@ app.filter('searchFor', function () {
     };
 });
 
-// this controller needs AngularJS internally provided service $http, and we ourself defined service, sharebook
-// it is used in home.html
-
-//Given a rule object, which contains all the user selected search criteria, returning 
-// an object, which contains two objects: 1. rule4 and ruleSelection. So the returning 
-// object returnRule = {
-// 	 "rule4" : {rule4},
-// 	 "ruleSelection : {ruleSelection}
-// }
-// where rule4 object is an object which will be used by mongoDB, and
-// ruleSelection is an object to remember what the user selected in the search page 
-// so that we can remember what user selected and its format help us to get back
-// user's selection easily
-
-
-
-
 // used in index.html
 app.controller('indexController', function ($scope, $http, $state) {
     // $http.get(webhost + "/getSearchResources").success(function (response) {
@@ -170,27 +153,30 @@ app.controller('contact', function ($scope, $http, $state) {
 
 app.controller('home', function ($scope, $http, $state) {
     showLog("in home controller");
-    function CarouselCtrl($scope) {
+    // function CarouselCtrl($scope) {
 
-        // initializing the time Interval
-        $scope.myInterval = 10000;
+    // initializing the time Interval
+    $scope.myInterval = 10000;
 
-        // Initializing  slide rray  
-        $scope.slides = [
-            { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Cute Fish' },
+    // Initializing  slide rray  
+    $scope.slides = [
+        { image: 'img/images1.jpg', text: 'Antiques1' },
+        { image: 'img/images2.jpg', text: 'Antiques2' },
+        { image: 'img/images3.jpg', text: 'Antiques3' },
+        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Cute Fish' },
 
-            { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Image2' },
-            { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Swordtail%20PIX/Xiphophorus%20helleriAQ%20Hifin%20Black%20males.jpg', text: 'Image3' },
-            { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Image4' }
-        ];
+        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Image2' },
+        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Swordtail%20PIX/Xiphophorus%20helleriAQ%20Hifin%20Black%20males.jpg', text: 'Image3' },
+        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Image4' }
+    ];
 
-        var slides = $scope.slides;
-        console.log(slides);
-    }
-    CarouselCtrl($scope);
+    var slides = $scope.slides;
+    console.log(slides);
+    // }ß
+    // CarouselCtrl($scope);
 });
 
 app.controller('products', function ($scope, $http, $state) {
-  $scope.X="123";
+    $scope.X = "123";
 });
 

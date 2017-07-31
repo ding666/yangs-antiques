@@ -94,31 +94,11 @@ http://bootstrap3-menu.codedorigin.com/#sthash.5PmNg8dP.RAHAIBh9.dpbs */
 	padding-top: 40px;
 }
 
-/* the following is used for testing metadata project. verdana */
-.pcmLogo {
-    font-family: verdana;
-    font-size: 16px; 
-    display:inline-block;
-}
-
-.chartTitle {
-    font-size: 14px;   
-    color: #0568AE;
-    font-weight: bold;
-}
-
-.Hchart1 div {
-  font: 10px sans-serif;
-  background-color: steelblue;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: white;
-}
 
 /* The following is added by Ding */
 
-* {box-sizing:border-box}
+/* * {box-sizing:border-box} */
+
 body {font-family: Verdana,sans-serif;margin:0}
 .mySlides {display:none}
 
@@ -130,7 +110,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+/* .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -142,13 +122,13 @@ body {font-family: Verdana,sans-serif;margin:0}
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-}
+} */
 
 /* Position the "next button" to the right */
-.next {
+/* .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
+} */
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -212,4 +192,30 @@ body {font-family: Verdana,sans-serif;margin:0}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+/* The following is added by ding */
+
+/* To overwrite carousel-control.right */
+
+.carousel-control.right {
+    top: 50%;
+    margin-top: -20px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+     background: rgba(0,0,0,0); /* set alpha 0, to make background transparent */
+}
+
+.carousel-control.left {
+    /* position: absolute; */
+    top: 50%;
+    margin-top: -20px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+     background: rgba(0,0,0,0); /* set alpha 0, to make background transparent */
+
 }
