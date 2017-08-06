@@ -160,18 +160,15 @@ app.controller('home', function ($scope, $http, $state) {
     // function CarouselCtrl($scope) {
 
     // initializing the time Interval
-    $scope.myInterval = 10000;
+    $scope.myInterval = 5000;
 
     // Initializing  slide rray  
     $scope.slides = [
-        { image: 'img/images1.jpg', text: 'Antiques1' },
-        { image: 'img/images2.jpg', text: 'Antiques2' },
-        { image: 'img/images3.jpg', text: 'Antiques3' },
-        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Cute Fish' },
-
-        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Image2' },
-        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Swordtail%20PIX/Xiphophorus%20helleriAQ%20Hifin%20Black%20males.jpg', text: 'Image3' },
-        { image: 'http://www.wetwebmedia.com/fwsubwebindex/Cyprinodontiform%20PIX/Platy%20PIX/Xiphophorus%20maculatusAQ%20Neon%20female.jpg', text: 'Image4' }
+        {image: 'img/img1.jpg', text: '钧瓷'},
+        {image: 'img/img2.jpg', text: '斗彩鸡缸杯'},
+        {image: 'img/img3.jpg', text: '元代钓窑碗'},
+        {image: 'img/img4.jpg', text: '钓窑双龙耳屏'}
+    
     ];
 
     var slides = $scope.slides;
