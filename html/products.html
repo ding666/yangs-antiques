@@ -1,4 +1,18 @@
 <div class="container-fluid" ng-controller="products" id="container">
-<h1>Products</h1>
-X={{X}}
+    <h1>公司产品</h1>
+    
+  
+    <div class="container">
+        <div class="row" ng-repeat="prodRow in products track by $index" ng-if="$index % 4 == 0">
+            <div class="col-lg-3" ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]" ng-if="products[i] != null">
+                <div>
+                   <!-- <img class="rotateimg" src="products/{{products[i].fileName}}.jpeg"> -->
+                    <img height = "320" width = "240" src="products/{{products[i].fileName}}.jpeg"><br>
+                    
+                    <b> {{products[i].description}}</b><br>
+                    产品号：{{products[i].id}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

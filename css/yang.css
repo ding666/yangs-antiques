@@ -219,3 +219,15 @@ body {font-family: Verdana,sans-serif;margin:0}
      background: rgba(0,0,0,0); /* set alpha 0, to make background transparent */
 
 }
+
+.rotateimg {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+img {
+  image-orientation: from-image;
+}

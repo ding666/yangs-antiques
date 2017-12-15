@@ -179,5 +179,12 @@ app.controller('home', function ($scope, $http, $state) {
 
 app.controller('products', function ($scope, $http, $state) {
     $scope.X = "123";
+    console.log("Inside product controller");
+    $http.get("listProducts.php")
+        .then(function (response) {
+            console.log(response);
+            $scope.products = response.data;
+            $scope.nProd = response.data.length;
+        });
 });
 
